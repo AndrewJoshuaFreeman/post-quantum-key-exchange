@@ -4,7 +4,7 @@ post-quantum key exchange based on learning with errors (LWE)
 
 ## overview
 
-this implements a lattice-based key encapsulation mechanism using the hardness of learning with errors. the protocol allows two parties to agree on a shared 256-bit key that remains secure against quantum adversaries.
+implements a lattice-based key encapsulation mechanism using the hardness of learning with errors. the protocol allows two parties to agree on a shared 256-bit key that remains secure against quantum attacks
 
 core components:
 - parameter sets tunable for security/performance tradeoff
@@ -12,15 +12,13 @@ core components:
 - reconciliation using nearest-plane decoding
 - SHA-256 key derivation from agreed bits
 
-this is an educational implementation demonstrating the structure of post-quantum protocols, not a production library.
-
 ## build
 
 ```bash
 make
 ```
 
-requires g++ with C++17 support.
+requires g++ with C++17 support or better. tested on macbook pro m5
 
 ## usage
 
@@ -73,6 +71,6 @@ correctness depends on noise remaining small enough for decoding. failure probab
 
 ## references
 
-lattice-based cryptography underpins NIST post-quantum standards (Kyber, Dilithium). this implementation uses a simplified reconciliation approach for educational purposes.
+lattice-based cryptography underpins NIST post-quantum standards (Kyber, Dilithium). this implementation uses a simplified reconciliation approach
 
-for parameter selection methodology and security estimates, see foundational work on Ring-LWE and module-LWE in the literature.
+for parameter selection methodology and security estimates, see foundational work on Ring-LWE and module-LWE in the literature, or shoot me an email if interested
